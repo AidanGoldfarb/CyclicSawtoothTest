@@ -9,6 +9,7 @@ do
         ./test $inputsz >> "$NAME".txt
     done
 done
+mkdir -p data
 mv *.txt data/
 echo "Please email the contents of the data folder to agoldfa7@u.rochester.edu"
 echo "Thank you!"
