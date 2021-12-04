@@ -10,5 +10,5 @@ do
 done
 mkdir -p data
 mv *.txt data/
-echo "Please email the contents of the data folder to agoldfa7@u.rochester.edu"
+echo "Please email the contents of the data folder, as well as the name/type/model of your processor (if known), to agoldfa7@u.rochester.edu"
 echo "Thank you!"
