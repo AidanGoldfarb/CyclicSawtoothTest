@@ -1,3 +1,4 @@
+#!/bin/bash
 gcc -O0 -Wall -Werror test.c -o test
 # NAME=$(cat /proc/cpuinfo | grep -E 'model name' | head -1 )
 for sz in 10 100 1000 10000 100000 1000000 10000000 100000000
