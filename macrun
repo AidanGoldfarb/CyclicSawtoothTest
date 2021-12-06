@@ -1,12 +1,22 @@
 #!/bin/bash
-clang -O0 -Wall -Werror test.c -o test
+clang -O0 -Wall -Werror testc.c -o testc
+clang -O0 -Wall -Werror tests.c -o tests
 # NAME=$(cat /proc/cpuinfo | grep -E 'model name' | head -1 )
 for sz in 10 100 1000 10000 100000 1000000 10000000 100000000
 do
     for factor in 1 2 3 4 5 6 7 8 9 10
     do
         inputsz=$(($sz*$factor))
-        ./test $inputsz >> res.txt
+        ./test $inputsz >> rescyclic.txt
+    done
+done
+
+for sz in 10 100 1000 10000 100000 1000000 10000000 100000000
+do
+    for factor in 1 2 3 4 5 6 7 8 9 10
+    do
+        inputsz=$(($sz*$factor))
+        ./test $inputsz >> ressawtooth.txt
     done
 done
 mkdir -p data
