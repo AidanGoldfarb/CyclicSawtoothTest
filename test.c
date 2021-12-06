@@ -21,6 +21,7 @@ int main(int argc, char **argv){
     clock_t end = clock();
     double rt = (double)(end-start)/CLOCKS_PER_SEC;
     fprintf(stdout,"%lld\t%f\n",M,rt);
+    free(arr);
     return 0;
 }
 
